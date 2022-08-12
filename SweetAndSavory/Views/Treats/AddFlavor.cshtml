@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SweetAndSavory.Models.Treat;
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.TreatId)
+  {
+  @Html.DropDownList("FlavorId", "Flavors List")
+ <input type="submit" value="Save Changes" />
+}}
+
+<p>@Html.ActionLink("Treat List", "Index")</p>
